@@ -1,5 +1,5 @@
 var gulp = require("gulp");
-var sass = require("gulp-stylus");
+var stylus = require("gulp-stylus");
 var plumber = require("gulp-plumber");
 var browserSync = require("browser-sync");
 var notify = require("gulp-notify");
@@ -43,7 +43,7 @@ gulp.task('stylus', function() {
                 // koutoSwiss(),
             ]
         }))
-        .pipe(gulp.dest("./dst/css"));
+        .pipe(gulp.dest("./dst/css"))
         //reloadせずにinjectする
         .pipe(browserSync.stream())
 });
